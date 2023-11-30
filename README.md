@@ -6,7 +6,9 @@ This installation instruction is based on Alpine Linux Raspberry Pi ARMv7 versio
 - Install the dependancies
 ```apk add ffmpeg v4l-utils alsa-utils screen unzip nano```
 - Download the zip file of the git repository
-```wget -O ffmpegWebcamStreamer.zip https://github.com/XtendedGreg/ffmpegWebcamStreamer/archive/refs/heads/main.zip```
+```
+wget -O ffmpegWebcamStreamer.zip https://github.com/XtendedGreg/ffmpegWebcamStreamer/archive/refs/heads/main.zip
+```
 - Unzip the zip file
 ```unzip ffmpegWebcamStreamer.zip```
 - Remove Unzip Package
