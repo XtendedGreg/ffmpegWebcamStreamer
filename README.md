@@ -2,7 +2,7 @@
 Live Streaming Encoder for a Webcam Using FFMPEG as seen on XtendedGreg YouTube: https://youtube.com/live/oQlZpXU7r-U
 
 ## Installation
-This installation instruction is based on Alpine Linux Raspberry Pi ARMv7 version running on a Raspberry Pi with the apk community repository enabled
+This installation instruction is based on Alpine Linux Raspberry Pi ARMv7 version running on a Raspberry Pi with the apk community repository enabled.  This will allow streaming video and audio from a USB input device like a webcam or HDMI capture device which is UVC supported.
 - Install the dependancies
 ```apk add ffmpeg v4l-utils alsa-utils screen unzip nano```
 - Download the zip file of the git repository
