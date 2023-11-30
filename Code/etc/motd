@@ -1,0 +1,9 @@
+#################################################################################
+                           Live Webcam Streaming Encoder
+
+INIT: /etc/init.d/ffmpeg [start|stop|restart]
+EXEC: /bin/ffmpeg-run
+SCREEN: screen -r ffmpeg
+
+Last Modified: 11-26-2023 by XtendedGreg
+

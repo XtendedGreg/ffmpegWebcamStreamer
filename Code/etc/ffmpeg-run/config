@@ -1,0 +1,30 @@
+### Video Input ###
+# Run "v4l2-ctl --list-devices" for a list
+videoInput=/dev/video0
+
+# Run "v4l2-ctl --device [videoInput Device] --list-formats" for a list
+videoFormat=mjpeg
+
+# Run "v4l2-ctl --device [videoInput Device] --list-formats-ext" for a list
+videoWidth=1280
+videoHeight=720
+videoFPS=30
+
+
+### Audio Input ###
+# Run "arecord -l" for a list
+audioInput=hw:0,0
+
+# Usually 2, but change to 1 if there is an error
+audioChannels=1
+
+# This will be our output audio sample rate (usually 44100 or 48000 is good)
+audioSamplerate=44100
+
+
+### Output Format ###
+outputFramerate=23.976
+outputVideoBitrate=5000k
+outputAudioBitrate=128k
+outputFormat=mpegts
+outputAddress=udp://239.1.1.1:10000

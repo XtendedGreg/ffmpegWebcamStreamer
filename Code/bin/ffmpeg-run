@@ -1,0 +1,16 @@
+#!/bin/ash
+# Live Webcam Streaming Encoder by XtendedGreg 11-26-2023
+# Requires Packages "ffmpeg v4l-utils alsa-utils"
+# Requires usercfg.txt with "dtoverlay=vc4-fkms-v3d" and "arm_boost=1" on SD Card root
+source /etc/ffmpeg-run/config
+
+while true; do
+
+ffmpeg -fflags +igndts \
+-re -f v4l2 -input_format ${videoFormat} -video_size ${videoWidth}x${videoHeight} -i ${videoInput} \
+-re -f alsa -channels ${audioChannels} -sample_rate ${audioSamplerate} -i ${audioInput} \
+-vf fps=${outputFramerate},setpts=N/${outputFramerate}/TB -c:v h264_v4l2m2m -b:v ${outputVideoBitrate} -pix_fmt yuv420p -g ${outputFramerate} \
+-c:a mp3 -b:a ${outputAudioBitrate} -ar ${audioSamplerate} \
+-preset ultrafast -tune zerolatency -f ${outputFormat} ${outputAddress}
+
+done
